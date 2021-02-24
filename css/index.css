@@ -1,0 +1,1567 @@
+.topbar-wrapper{
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    background-color: #E3E4E5;
+    border-bottom: 1px #ddd solid;
+}
+.topbar .location{
+    float: left;
+}
+.topbar .topbar-info{
+    float: right;
+}
+.topbar-info li,
+.topbar-info span{
+    float: left;
+}
+.topbar .location>a,
+.topbar .topbar-info a{
+    display: block;
+    height: 30px;
+}
+.topbar a,
+.topbar span,
+.topbar .highlight i{
+    color: #999;
+}
+.topbar .highlight{
+    color: #E51018;
+}
+.go-up{
+    /*不知道为什么，图标字体旁边的汉字会沉下去一些，.go-up用于调整该偏差*/
+    position: relative;
+    top: -2px;
+}
+.go-up i{
+    position: relative;
+    top: 2px;
+}
+.line{
+    font-size: 10px;
+    font-weight: 100;
+    color: #CCC;
+    margin: 0 12px;
+}
+.topbar-info li:first-of-type{
+    margin-right: 8px;
+}
+.header-wrapper{
+    width: 100%;
+    height: 141px;
+    border-bottom: 1px solid #DDD;
+    background-color: #fff;
+}
+.header{
+    position: relative;
+    height: 100%;
+}
+.logo a{
+    display: block;
+    width: 190px;
+    height: 120px;
+    background-image: url(../img/header/sprite.png);
+    position: absolute;
+    top: 10px;
+}
+/* .logo a:hover{
+    background-image: url(../img/gif/1.gif);
+    这里有点问题，之后配合JS修改
+} */
+.search-wrapper{
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+.search-wrapper input{
+    position: absolute;
+    left: 260px;
+    bottom: 0;
+    width: 485px;
+    height: 28px;
+    outline: none;
+    border: 2px solid #F3160F;
+    padding: 2px 44px 2px 17px;
+}
+.search-wrapper button:nth-of-type(1){
+    position: absolute;
+    left: 751px;
+    bottom: 2px;
+    width: 58px;
+    height: 32px;
+    outline: none;
+    border: none;
+    background-color: #F3160F;
+    transition: 0.3s background-color;
+    cursor: pointer;
+}
+.search-wrapper button:nth-of-type(1) i{
+    font-size: 18px;
+    color: #fff;
+}
+.search-wrapper button:nth-of-type(1):hover{
+    background-color: #CF2420;
+}
+.search-wrapper>a i{
+    position: absolute;
+    left: 716px;
+    bottom: 8px;
+    font-size: 18px;
+    color: #999;
+}
+.search-wrapper>a i:hover{
+    color: #E71E13;
+}
+.search-wrapper button:nth-of-type(2){
+    position: absolute;
+    width: 132px;
+    height: 36px;
+    left: 828px;
+    bottom: 1px;
+    border: 1px solid #EEE;
+    background-color: #fff;
+    outline: none;
+    font-size: 12px;
+    color: #E71E13;
+}
+.search-wrapper button:nth-of-type(2) i{
+    display: inline-block;
+    margin-right: 8px;
+    position: relative;
+    top: 1px;
+}
+.search-wrapper button:nth-of-type(2) a{
+    color: #E71E13;
+}
+.search-wrapper button:nth-of-type(2):hover{
+    outline: 1px #BE1B24 solid;
+}
+.host-words{
+    width: 550px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    font-size: 12px;
+    left: 261px;
+    top: 65px;
+}
+.host-words li{
+    float: left;
+}
+.host-words li a{
+    display: block;
+    height: 20px;
+    margin-right: 9px;
+    color: #999;
+}
+.host-words .highlight{
+    color: #E51018;
+}
+.host-words li a:hover{
+    color: #E51018;
+}
+.header-nav{
+    width: 770px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    left: 200px;
+    bottom: 0px;
+}
+.header-nav li{
+    float: left;
+}
+.header-nav li a{
+    display: block;
+    margin: 0 11px;
+    font-size: 15.5px;
+    transition: color 0.2s;
+}
+.header-nav li a:hover{
+    color: #D6291D;
+}
+.highlight_bold{
+    color: #D6291D;
+    font-weight: bold;
+}
+.qrcode{
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+    right: -2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
+}
+.qrcode img{
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+}
+.banner-wrapper{
+    width: 100%;
+    height: 480px;
+    margin-bottom: 30px;
+}
+.banner{
+    position: relative;
+}
+.menu{
+    position: absolute;
+    width: 190px;
+    height: 450px;
+    padding: 10px 0;
+    background-color: #fff;
+    top: 10px;
+}
+.menu li{
+    height: 25px;
+    line-height: 25px;
+    padding-left: 18px;
+    font-size: 14px;
+    transition: 0.2s background-color;
+}
+.menu li span{
+    display: inline-block;
+    font-size: 12px;
+    color: #757575;
+    padding: 0 2px;
+}
+.menu li:hover{
+    background-color: #D9D9D9;
+}
+.menu li a:hover{
+    color: #D6291D;
+}
+.banner-big-img-list-wrapper{
+    position: absolute;
+    top: 10px;
+    left: 200px;
+    width: 590px;
+    height: 470px;
+}
+.banner-big-img-list{
+    position: relative;
+    width: 590px;
+    height: 470px;
+}
+.banner-big-img-list li{
+    position: absolute;
+}
+.banner-big-img-list img{
+    width: 590px;
+    height: 470px;
+}
+
+.slider-indicators{
+    position: absolute;
+    width: 120px;
+    height: 15px;
+    line-height: 15px;
+    /* background-color: #bfa; */
+    left: 30px;
+    bottom: 16px;
+}
+.slider-indicators a{
+    float:left;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 50%;
+    margin: 0;
+    background-clip: content-box;
+    border: 2px solid transparent;
+    cursor: default;
+    /*光标改为箭头*/
+}
+.slider-indicators a:hover{
+    border: 2px solid rgba(255, 255, 255, .3);
+    background-color: #fff;
+}
+.banner-small-img-list-wrapper{
+    position: absolute;
+    top: 10px;
+    left: 800px;
+    height: 470px;
+}
+.banner-small-img-list{
+    position: relative;
+    height: 470px;
+}
+.banner-small-img-list ul{
+    width: 190px;
+    height: 150px;
+    position: relative;
+}
+.banner-small-img-list ul:nth-of-type(2){
+    top: 10px;
+}
+.banner-small-img-list ul:nth-of-type(3){
+    top: 20px;
+}
+.banner-small-img-list ul li{
+    position: absolute;
+}
+.banner-small-img-list img{
+    width: 190px;
+    height: 150px;
+    /* transition: opacity 0.3s; */
+}
+/* .banner-small-img-list img:hover{
+    opacity: 0.8;
+} */
+.right-column-wrapper{
+    width: 190px;
+    top: 10px;
+    height: 470px;
+    position: absolute;
+    background-color: #fff;
+    right: 0;
+}
+.right-column{
+    position: relative;
+}
+.user>a{
+    position: absolute;
+}
+.user a{
+    transition: all 0.2s;
+}
+.user a:nth-of-type(2):hover{
+    color: #D6291D;
+}
+.user p a:hover{
+    color: #D6291D;
+}
+.user>a:nth-of-type(3):hover{
+    background-color: #D6291D;
+}
+.user>a:nth-of-type(4):hover{
+    background-color: #D6291D;
+    color: #fff;
+}
+.dog-img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-image: url(../img/user/1.png);
+    background-position: center;
+    background-size: 40px 40px;
+    top: 14px;
+    left: 22px;
+}
+.user{
+    width: 190px;
+    height: 102px;
+}
+.user>a:nth-of-type(2){
+    width: 100px;
+    height: 16px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #666;
+    top: 16px;
+    left: 74px;
+}
+.user p{
+    position: absolute;
+    width: 100px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    left: 74px;
+    top: 32px;
+}
+.user p span{
+    color: #9A9A9A;
+}
+.user>a:nth-of-type(3),
+.user>a:nth-of-type(4){
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.user>a:nth-of-type(3){
+    color: #fff;
+    top: 66px;
+    left: 20px;
+    background-color: #E71E13;
+}
+.user>a:nth-of-type(4){
+    color: #DED28B;
+    top: 66px;
+    left: 100px;
+    background-color: #413333;
+}
+.divider-first{
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    top: 102px;
+    background: linear-gradient(90deg,#fff,#eee,#eee,#fff);
+}
+.news{
+    position: relative;
+    width: 190px;
+    height: 130px;
+    top: 1px;
+}
+.news h2{
+    position: absolute;
+    width: 56px;
+    height: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    left: 15px;
+    top: 11.5px;
+}
+.news>a{
+    position: absolute;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #999;
+    top: 10px;
+    right: 15px;
+    transition: 0.2s color;
+}
+.news>a:hover{
+    color: #D6291D;
+}
+.news>a>i{
+    font-size: 10px;
+}
+.news-list{
+    position: absolute;
+    width: 190px;
+    height: 88px;
+    top: 34px;
+    left: 16px;
+    font-size: 12px;
+    line-height: 22px;
+}
+.news-list a{
+    display: inline-block;
+    color: #666;
+}
+.news-list a:nth-of-type(2):after{
+    content: '...';
+}
+.news-list li a:first-child{
+    width: 35px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    background-color: #FBEEED;
+    color: #D8382D;
+}
+.news-list li a:first-child:hover + a:last-child,
+.news-list li a:last-child:hover{
+    color: #D6291D;
+}
+.divider-second{
+    position: absolute;
+    height: 1px;
+    left: 15px;
+    right: 15px;
+    top: 232px;
+    background: linear-gradient(90deg,#fff,#eee,#eee,#fff);
+}
+.service-list{
+    width: 190px;
+    height: 240px;
+    padding-top: 10px;
+}
+.service-list li{
+    float: left;
+}
+.service-list li a{
+    display: block;
+    width: 63px;
+    height: 55px;
+    text-align: center;
+}
+.service-list a>i{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.service-list a>span{
+    font-size: 12px;
+    color: #333;
+    transition: color 0.3s;
+}
+.service-list li a:hover i,
+.service-list li a:hover span{
+    color: #D6291D;
+}
+.service-list li:nth-of-type(1) i,
+.service-list li:nth-of-type(8) i,
+.service-list li:nth-of-type(11) i{
+    color: #67A9E5;
+}
+.service-list li:nth-of-type(2) i,
+.service-list li:nth-of-type(4) i,
+.service-list li:nth-of-type(12) i{
+    color: #EBA434;
+}
+.service-list li:nth-of-type(3) i,
+.service-list li:nth-of-type(5) i,
+.service-list li:nth-of-type(7) i{
+    color: #62D6C7;
+}
+.service-list li:nth-of-type(6) i,
+.service-list li:nth-of-type(9) i,
+.service-list li:nth-of-type(10) i{
+    color: #E1695F;
+}
+.scroll-wrapper{
+    height: 260px;
+    margin-bottom: 20px;
+}
+.scroll{
+    position: relative;
+    width: 1190px;
+    height: 260px;
+}
+.count-down{
+    float: left;
+    width: 190px;
+    height: 260px;
+}
+.count-down>a{
+    display: block;
+    width: 190px;
+    height: 260px;
+    background-image: url(../img/carousel/1/background.png);
+    background-position: center;
+    color: #fff;
+    font-weight: bold;
+}
+.count-down a h1{
+    position: absolute;
+    font-size: 30px;
+    color: #fff;
+    font-weight: bold;
+    width: 190px;
+    height: 44.8px;
+    line-height: 44.8px;
+    text-align: center;
+    top: 31px;
+}
+.count-down a p{
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    width: 190px;
+    height: 25.4px;
+    line-height: 25.4px;
+    text-align: center;
+    top: 165px;
+    font-weight: normal;
+}
+.count-down a p strong{
+    font-size: 18px;
+    font-weight: bold;
+}
+.box-wrapper{
+    position: absolute;
+    width: 190px;
+    bottom: 30px;
+}
+.box{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #303430;
+    vertical-align: middle;
+    margin: 0 4.5px;
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+}
+.box:first-child{
+    margin-left: 37px;
+}
+.goods-list{
+    position: relative;
+    width: 800px;
+    height: 260px;
+    display: flex;
+    overflow: hidden;
+}
+.goods-list li a{
+    display: block;
+    width: 200px;
+    height: 260px;
+    background-color: #fff;
+    position: relative;
+}
+.goods-list li a::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 1px;
+    height: 200px;
+    transform: translateY(-50%);
+    background: linear-gradient(0deg,#fff,#eee,#fff);
+}
+.goods-list li a img{
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+.goods-list li a span:nth-of-type(1){
+    position: absolute;
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    top: 180px;
+    transition: color 0.3s;
+}
+.goods-list li a span:nth-of-type(2){
+    position: absolute;
+    width: 146px;
+    height: 22px;
+    line-height: 22px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 205px;
+    border: 1px solid #D6291D;
+    font-size: 12px;
+    padding-left: 12px;
+}
+.goods-list li a span:nth-of-type(2) span{
+    position: absolute;
+    left: -0.5px;
+    top: 0;
+    width: 30px;
+    height: 22px;
+    line-height: 24px;
+    color: #fff;
+    background-color: #D6291D;
+    text-align: end;
+    z-index: 1;
+}
+.goods-list li a span:nth-of-type(2) strong{
+    position: absolute;
+    font-size: 16px;
+    left: 22px;
+    font-weight: bold;
+    width: 68px;
+    height: 22px;
+    text-align: center;
+    background-color: #D6291D;
+    color: #fff;
+}
+.goods-list li a span:nth-of-type(2) strong::after{
+    position: absolute;
+    top: -1px;
+    left: 68px;
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 24px;
+    line-height: 22px;
+    clip-path: polygon(0% 0%,100% 0%,0% 100%);
+    background-color: #D6291D;
+}
+.goods-list li a span:nth-of-type(2) del{
+    position: absolute;
+    right: 10px;
+    color: #A2A2A2;
+}
+.goods-list li a:hover>span:nth-of-type(1){
+    color: #D6291D;
+}
+.little-slider{
+    float: left;
+    display: flex;
+    width: 180px;
+    height: 240px;
+    padding: 10px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+.little-slider li a{
+    display: block;
+    width: 180px;
+    height: 240px;
+    position: relative;
+}
+.little-slider li a img{
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 20px;
+    margin: 0 auto;
+}
+.little-slider a div{
+    position: absolute;
+    width: 180px;
+    height: 90px;
+    bottom: 0;
+    background: linear-gradient(180deg,rgba(255,255,255,.5),rgba(220,224,236,.5));
+}
+.little-slider a div p{
+    width: 180px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+.little-slider a p:nth-of-type(1){
+    color: #666;
+}
+.little-slider a p:nth-of-type(2){
+    font-weight: bold;
+}
+.little-slider a div span{
+    position: absolute;
+    display: inline-block;
+    width: 76px;
+    height: 22px;
+    line-height: 22px;
+    left: 0;
+    right: 0;
+    margin: 4px auto;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #D6291D;
+    border: 1px solid #D6291D;
+    padding-left: 4px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.little-slider a div span i{
+    font-size: 10px;
+}
+.little-slider ul{
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    /* background-color: #bfa; */
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    margin: 0 auto;
+}
+.little-slider ul li{
+    float: left;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #999;
+}
+.little-slider ul li:nth-of-type(1){
+    margin-right: 4px;
+}
+.little-slider ul li:hover{
+    background-color: #D6291D;
+}
+.moving-wrapper{
+    width: 100%;
+    height: 260px;
+    margin-bottom: 20px;
+}
+.moving{
+    position: relative;
+}
+.nice-goods{
+    width: 190px;
+    height: 260px;
+    position: relative;
+}
+.nice-goods a{
+    display: block;
+    width: 190px;
+    height: 260px;
+    background-image: url(../img/carousel/2/background.png);
+}
+.nice-goods a div{
+    width: 160px;
+    height: 89px;
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, .7);
+    border-bottom-right-radius: 30px;
+    text-align: center
+    /*text-align有继承性，写给父元素即可*/
+}
+.nice-goods a div h2{
+    position: absolute;
+    color: #fff;
+    font-size: 27px;
+    width: 160px;
+    top: 15px;
+}
+.nice-goods a div span{
+    position: absolute;
+    color: #D6D6D6;
+    height: 20px;
+    line-height: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 10px;
+}
+.nice-goods a div span i{
+    font-size: 20px;
+    position: relative;
+    top: 1.5px;
+    transition: color 0.3s;
+}
+.nice-goods a:hover i{
+    color: #D6291D;
+}
+.move-list{
+    width: 990px;
+    height: 260px;
+    position: absolute;
+    left: 200px;
+    top: 0;
+    background-color: #fff;
+    overflow: hidden;
+    /*不知道为什么，直接在这里写overflow-x在两个方向都有滚动条*/
+
+}
+.move-list:hover{
+    /* overflow: overlay; 兼容性不好*/
+    overflow-x: auto;
+}
+/*
+ .move-list::-webkit-scrollbar{
+    width: 12px;
+}
+.move-list::-webkit-scrollbar-thumb{
+    background:rgba(255,0,0,0.4);
+    border-radius:10px;
+}
+    这种方式确实能修改滚动条样式，但不兼容FF，尝试原网页那样，用span+JS解决
+ */
+
+.move-list ul{
+    width: 950px;
+    height: 260px;
+    padding: 0 20px;
+    background-color: #fff;
+    position: absolute;
+}
+.move-list ul:nth-of-type(2){
+    left: 990px;
+}
+.move-list ul li{
+    float: left;
+}
+.move-list ul li a{
+    display: block;
+    width: 150px;
+    height: 180px;
+    margin-right: 50px;
+    position: relative;
+}
+.move-list ul li:last-of-type a{
+    margin-right: 0;
+}
+.move-list ul li:nth-of-type(2n+1) a{
+    margin-top: 20px;
+}
+.move-list ul li:nth-of-type(2n) a{
+    margin-top: 55px;
+}
+.move-list ul img{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    transition: opacity 0.2s;
+}
+.move-list ul li a:hover img{
+    opacity: 0.8;
+}
+.move-list ul li:nth-of-type(2n+1) img{
+    top: 0px;
+}
+.move-list ul li:nth-of-type(2n) img{
+    bottom: 0;
+}
+.move-list ul p{
+    position: absolute;
+    width: 150px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    transition: color 0.2s;
+}
+.move-list ul li a:hover p{
+    color: #D6291D;
+}
+.move-list ul li:nth-of-type(2n+1) p{
+    bottom: 0;
+}
+.tab-wrapper{
+    width: 100%;
+    height: 340px;
+    margin-bottom: 20px;
+}
+.tab{
+    position: relative;
+}
+.new-goods{
+    position: relative;
+    width: 290px;
+    height: 340px;
+    background-image: url(../img/carousel/3/background.png);
+    background-position: center;
+    background-color: #fff;
+    background-size: 290px 340px;
+    float: left;
+    margin-right: 10px;
+}
+/*此处要用JS去改进，修改当前图片(index)的宽度和高度*/
+.scroll-goods{
+    position: absolute;
+    width: 290px;
+    height: 130px;   
+    top: 70px;
+    overflow: hidden;
+    text-align: center;
+    cursor: default;
+}
+.scroll-goods div{
+    /* display: none; */
+    position: absolute;
+    width: 104px;
+    height: 104px;
+    /* transition: 0.3s all; */
+    /*暂时没想好哪些需要过渡*/
+}
+.scroll-goods div img{
+    width: 104px;
+    height: 104px;
+    cursor: pointer;
+}
+.scroll-goods div:nth-of-type(1){
+    top: 13px;
+    left: -37px;
+}
+.scroll-goods div.center{
+    width: 130px;
+    height: 130px;
+    left: 80px;
+}
+.scroll-goods div.center img{
+    width: 130px;
+    height: 130px;
+}
+.scroll-goods div:nth-of-type(3){
+    top: 13px;
+    right: -37px;
+}
+.scroll-goods div:nth-of-type(4){
+    top: 13px;
+    right: -154px;
+}
+.scroll-goods div span{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 10px;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+    font-size: 12px;
+    background: linear-gradient(90deg,#DA483B,#EF8253);
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    opacity: 0;
+}
+.scroll-goods .center span{
+    opacity: 1;
+    cursor: pointer;
+}
+.scroll-goods .center span:hover + img{
+    opacity: 0.8;
+}
+.scroll-goods object{
+    cursor: pointer;
+}
+.msg{
+    position: absolute;
+    bottom: 30px;
+    width: 200px;
+    height: 95px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+.msg:hover span:nth-of-type(1){
+    color:#D6291D;
+}
+.msg span{
+    display: inline-block;
+    width: 200px;
+    height: 24px;
+    line-height: 24px;
+}
+.msg span:nth-of-type(1){
+    font-size: 14px;
+    transition: color 0.3s;
+}
+.msg span:nth-of-type(2){
+    font-size: 12px;
+    color: #999;
+}
+.msg span:nth-of-type(3){
+    font-size: 18px;
+    color: #D6291D;
+    position: relative;
+    top: 16px;
+}
+/*有一些hover效果没做完，之后用JS做*/
+.rank{
+    width: 290px;
+    height: 340px;
+    position: relative;
+    float: left;
+    background-color: #fff;
+    margin-right: 10px;
+}
+.tab-head{
+    width: 280px;
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    left: 5px;
+    top: 55px;
+}
+.tab-head a{
+    float: left;
+    width: 62px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+    margin: 0 4px;
+    background-color: #F6F6F6;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+}
+.tab-head a:hover{
+    background-color: #D6291D;
+    color: #fff;
+}
+.top-list{
+    position: absolute;
+    width: 290px;
+    height: 240px;
+    bottom: 10px;
+}
+.top-list a{
+    display: block;
+    width: 260px;
+    height: 70px;
+    margin: 0 15px 10px 15px;
+    position: relative;
+}
+.top-list a:hover span:nth-of-type(2){
+    color: #D6291D;
+    /*
+        发现hover失效的原因，是我把几个top-list叠在一起，下边hidden
+        之后试着用JS写，如果JS不成功，就修改HTML结构
+    */
+} 
+.top-list a span{
+    text-align: center;
+}
+.top-list a span:nth-of-type(1){
+    position: absolute;
+    top: 15px;
+    width: 28.8px;
+    height: 40.8px;
+    background-image: url(../img/tab/2/r1.png);
+    background-position: center;
+    background-size: 28.8px 40.8px;
+    font-weight: bold;
+}
+.top-list a span:nth-of-type(1) em:nth-of-type(1){
+    font-size: 12px;
+    color: rgba(0,0,0,.2);
+}
+.top-list a span:nth-of-type(1) em:nth-of-type(2){
+    font-size: 17px;
+    color: #fff;
+}
+.top-list img{
+    position: absolute;
+    left: 38px;
+    width: 70px;
+    height: 70px;
+}
+.top-list a span:nth-of-type(2){
+    position: absolute;
+    width: 140px;
+    font-size: 14px;
+    left: 116px;
+    top: 16px;
+    line-height: 20px;
+    transition: 0.2s color;
+    word-break: break-all;
+    /*规定换行方式*/
+}
+.top-list a:nth-of-type(2) span:nth-of-type(1){
+    background-image: url(../img/tab/2/r2.png);
+}
+.top-list a:nth-of-type(3) span:nth-of-type(1){
+    background-image: url(../img/tab/2/r3.png);
+}
+/*到时候用修改类名来实现tab切换，类的作用是修改透明度*/
+.good-shop{
+    float: left;
+    width: 290px;
+    height: 340px;
+    background-color: #fff;
+    position: relative;
+    margin-right: 10px;
+}
+.good-shop div{
+    position: absolute;
+    width: 260px;
+    height: 266px;
+    padding: 0 15px;
+    bottom: 14px;
+}
+.good-shop div a{
+    position: relative;
+    display: block;
+    width: 260px;
+    height: 128px;
+    background-image: url(../img/shop/bg2.png);
+}
+.good-shop div a:hover span:nth-of-type(1){
+    color: #D6291D;
+}
+.good-shop div a:first-of-type{
+    margin-bottom: 10px;
+    background-image: url(../img/shop/bg1.png);
+}
+.good-shop div a img{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    padding: 5px;
+    right: 5px;
+    top: 10px;
+}
+.good-shop div a span{
+    position: absolute;
+    left: 15px;
+    font-size: 14px;
+    line-height: 16px;
+}
+.good-shop div a span:nth-of-type(1){
+    top: 18px;
+    width: 120px;
+    transition: color 0.2s;
+}
+.good-shop div a span:nth-of-type(2){
+    font-size: 12px;
+    top: 40px;
+    border: 1px solid #5D6FAC;
+    color: #5D6FAC;
+    width: 54px;
+    height: 16px;
+    text-align: center;
+}
+.good-shop div a span:nth-of-type(3){
+    bottom: 16px;
+    font-size: 12px;
+    color: #999;
+}
+.good-shop div a:nth-of-type(2) span:nth-of-type(2){
+    top: 55px;
+    color: #D6291D;
+    border-color: #D6291D;
+    width: 28px;
+}
+.coupon{
+    float: left;
+    width: 290px;
+    height: 340px;
+    background-color: #fff;
+    position: relative;
+}
+.coupon-list{
+    position: absolute;
+    width: 260px;
+    height: 280px;
+    padding: 0 15px;
+    bottom: 0;
+    opacity: 0.9;
+    background: linear-gradient(180deg,#DA483B,#EF8253);
+}
+.coupon-list>a{
+    display: block;
+    width: 260px;
+    height: 82px;
+    position: relative;
+    background-color: #F6F6F6;
+    border-bottom: 2px dashed #E38982;
+}
+.coupon-list>a:nth-of-type(1){
+    margin-top: 15px;
+}
+.coupon-list>a:nth-of-type(3){
+    border: none;
+}
+.coupon-list>a div{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+    left: 7px;
+    top: 8px;
+}
+.coupon-list>a img{
+    width: 50px;
+    height: 50px;
+}
+.coupon-list>a p{
+    position: absolute;
+}
+.coupon-list>a p:nth-of-type(1){
+    width: 140px;
+    height: 34px;
+    line-height: 34px;
+    left: 77px;
+    top: 3px;
+    font-size: 14px;
+    color: #D83634;
+}
+.coupon-list>a p:nth-of-type(1) span{
+    font-family: impact,sans-serif;
+    font-size: 28px;
+}
+.coupon-list>a p:nth-of-type(2){
+    width: 140px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 12px;
+    color: #999;
+    left: 80px;
+    top: 36px;
+}
+.coupon-list>a p:nth-of-type(3){
+    font-size: 12px;
+    left: 80px;
+    top: 57px;
+}
+.coupon-list>a p:nth-of-type(4){
+    font-size: 12px;
+    width: 12px;
+    line-height: 14px;
+    top: 16px;
+    right: 20px;
+    transition: color 0.2s;
+}
+.coupon-list>a i{
+    position: absolute;
+    font-size: 10px;
+    height: 82px;
+    line-height: 82px;
+    right: 3px;
+    transition: color 0.2s;
+}
+.coupon-list>a:hover p:nth-of-type(4){
+    color: #DA483B;
+}
+.coupon-list>a:hover i{
+    color: #DA483B;
+}
+.recommend-wrapper{
+    height: 789px;
+    margin-bottom: 10px;
+}
+.recommend{
+    position: relative;
+}
+.recommend h1{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.recommend-tab{
+    height: 60px;
+    padding: 0 52px;
+    background-color: #fff;
+    margin-bottom: 10px;
+}
+.recommend-tab li{
+    float: left;
+    width: 180px;
+    height: 60px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+}
+.recommend-tab li:hover span:not(.chosen_radius){
+    /*这样写是可行的*/
+    color: #D6291D;
+}
+.recommend-tab li span{
+    position: absolute;
+}
+.recommend-tab li span:nth-of-type(1){
+    font-weight: bold;
+    width: 80px;
+    height: 27px;
+    line-height: 27px;
+    left: 0;
+    right: 0;
+    top: 8px;
+    margin: 0 auto;
+}
+.recommend-tab li span:nth-of-type(2){
+    font-size: 14px;
+    width: 180px;
+    left: 0;
+    bottom: 5px;
+    height: 20px;
+    line-height: 20px;
+    color: #999;
+}
+.ver-divider{
+    float: left;
+    height: 40px;
+    margin: 10px 0;
+    width: 1px;
+    background: #dfdfdf;
+    background: linear-gradient(180deg,white,#dfdfdf 51%,white);
+}
+.recommend-goods-list{
+    height: 654px;
+}
+.recommend-goods-list a{
+    float: left;
+    width: 230px;
+    height: 322px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    position: relative;
+}
+.recommend-goods-list a:nth-of-type(5n){
+    margin-right: 0;
+}
+.recommend-goods-list a img{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 40px;
+    top: 30px;
+}
+.recommend-goods-list a p{
+    position: absolute;
+    width: 190px;
+    height: 48px;
+    line-height: 24px;
+    font-size: 14px;
+    left: 20px;
+    bottom: 52px;
+    color: #666;
+}
+.recommend-goods-list a>span{
+    position: absolute;
+    left: 18px;
+    bottom: 27px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #D6291D;
+    transition: 0.3s color;
+}
+.recommend-goods-list a em{
+    font-size: 18px;
+}
+.find-similar{
+    position: absolute;
+    width: 230px;
+    height: 66px;
+    bottom: 10px;
+    z-index: 1;
+    transition: background-color 0.3s;
+    background-color: transparent;
+    /*此处不能用opacity，因为会继承给子元素*/
+}
+.similar-btn{
+    position: absolute;
+    width: 122px;
+    height: 30px;
+    line-height: 30px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    text-align: center;
+    background-color: transparent;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    color: #fff;
+    font-size: 12px;
+    opacity: 1;
+}
+.similar-btn:hover{
+    background-color: #D6291D!important;
+}
+.similar-btn i{
+    position: relative;
+    font-size: 12px;
+}
+.recommend-goods-list a:hover .find-similar{
+    background-color: rgba(255, 255, 255, .8);
+}
+.recommend-goods-list a:hover .similar-btn{
+    background-color: #333;
+    transition: background-color 0.3s;
+    /*将transition写入hover，只有移入时有过渡效果*/
+}
+.recommend-goods-list a:hover span{
+    color: #fff;
+}
+.footer-service-wrapper{
+    width: 100%;
+    height: 103px;
+    border-bottom: 1px solid #DEDEDE;
+}
+.footer-service{
+    position: relative;
+}
+.service{
+    height: 42px;
+    line-height: 42px;
+    padding: 30px 0;
+    margin-bottom: 1px;
+    text-align: center;
+}
+.service li{
+    width: 297px;
+    height: 42px;
+    /* line-height: 42px; 该属性可以继承，不需要再写*/
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+.service li i{
+    font-weight: normal;
+    font-size: 40px;
+    color: #D6291D;
+    vertical-align: middle;
+    /*vertical-align是对子元素设置的，而不是父元素，感觉居中效果不太好，用相对定位调一调*/
+    position: relative;
+    top: -1px;
+    /*设置文字无法被选中*/
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+.footer-help-wrapper{
+    height: 160px;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+.footer-help{
+    border-bottom: 1px solid #DEDEDE;
+}
+.footer-help nav{
+    width: 198px;
+    float: left;
+    line-height: 21.6px;
+    color: #666;
+    padding-bottom: 20px;
+}
+.footer-help nav h5{
+    height: 21.6px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.footer-help nav p a{
+    font-size: 12px;
+    color: #888;
+}
+.footer-help nav p a:hover{
+    color: #D6291D;
+}
+.footer-help nav:last-of-type h5{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.footer-help nav:last-of-type div{
+    font-size: 12px;
+    line-height: 18px;
+    display: block;
+    width: 180px;
+    padding: 0 10px;
+}
+.footer-help nav:last-of-type span{
+    display: block;
+    width: 180px;
+}
+.footer-help nav:last-of-type a{
+    display: block;
+    font-size: 12px;
+    text-align: end;
+    color: #666;
+}
+.footer-help nav:last-of-type a i{
+    font-size: 10px;
+}
+.footer-help nav:last-of-type a:hover{
+    color: #D6291D;
+}
