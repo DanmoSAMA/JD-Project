@@ -4,24 +4,20 @@
     display: table;
     clear: both;
 }
-
 body{
     font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
     color: #333;
     min-width: 1190px;
     background-color: #F4F4F4;
 }
-
 .w{
     width: 1190px;
     margin: 0 auto;
 }
-
 a{
     text-decoration: none;
     color: #333;
 }
-
 /*存放复用的样式，提高优先级还是!important来得爽快*/
 
 /*hover变透明*/
@@ -37,6 +33,7 @@ a{
 .img-list-btn{
     display: block;
     position: absolute;
+    z-index: 9999;
     top: 50%;
     transform: translateY(-50%);
     width: 25px;
@@ -45,6 +42,7 @@ a{
     background-color: rgba(0, 0, 0, 0.2);
     color: #F9FAF9;
     transition: 0.25s background-color;
+    cursor: pointer;
 }
 .img-list-btn:hover{
     background-color: rgba(0, 0, 0, 0.4);
@@ -119,7 +117,33 @@ a{
     border: 2px solid rgba(255, 255, 255, .3)!important;
     background-color: #fff!important;
 }
-
+/*被选中的地名*/
+.chosen_location{
+    background-color: #E51018;
+    color: #fff!important;
+}
+.chosen_location:hover{
+    background-color: #E51018!important;
+    color: #fff!important;
+}
+.chosen_location:active{
+    border: 2px solid #000;
+    width: 24px!important;
+    height: 20px!important;
+    line-height: 20px!important;
+    padding: 0 6px!important;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+.chosen_location.long-content:active{
+    width: 36px!important;
+}
+.chosen_ranktab{
+    background-color: #D6291D!important;
+    color: #fff!important;
+}
 /*隐藏样式*/
 .hidden{
     opacity: 0;
@@ -128,4 +152,25 @@ a{
 }
 ._hidden{
     display: none; 
+}
+/*所有的动画*/
+@keyframes Ani1{
+    0%{
+        bottom: -369px;
+    }
+    5%{
+        bottom: 0;
+        top: 0;
+    }
+    100%{
+        top: 75px;
+    }
+}
+@keyframes Ani2{
+    0%{
+        bottom: 43px;
+    }
+    100%{
+        bottom: -18px;   
+    }
 }

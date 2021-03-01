@@ -8,6 +8,105 @@
 }
 .topbar .location{
     float: left;
+    position: relative;
+    height: 30px;
+}
+.topbar .location>a{
+    display: block;
+    min-width: 44px;
+    padding: 0 7px;
+}
+.location-drop{
+    position: absolute;
+    width: 300px;
+    height: 442px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top-color:transparent;
+    top: 31px;
+    left: -1px;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .1);
+    display: none;
+    overflow: hidden;
+}
+.topbar .location:hover{
+    border: 1px solid #ddd;
+    border-bottom-color: #fff;
+    background-color: #fff;
+    /* 因加了边框，location内文字被挤了1px，故作出调整 */
+    left: -1px;
+    top: -1px;
+}
+.topbar .location:hover .location-drop{
+    display: block;
+}
+.loc-top{
+    height: 192px;
+    padding-bottom: 15px;
+    border-bottom: 1px dotted #eee;
+}
+.loc-top div{
+    width: 60px;
+    height: 24px;
+    line-height: 24px;
+    padding: 2px 0;
+    float: left;
+}
+.topbar .loc-top div a{
+    display: block;
+    padding: 0 8px;
+    width: 24px;
+    height: 24px;
+}
+.long-content{
+    width: 36px!important;
+}
+.loc-top div a:hover{
+    background-color: #eee;
+}
+.loc-mid{
+    width: 290px;
+    height: 95px;
+    border-bottom: 1px dotted #eee;
+    margin: 10px 0 10px 10px;
+}
+.loc-mid p,
+.loc-bot p{
+    color: #999;
+    width: 290px;
+    height: 24px;
+    line-height: 24px;
+    margin: 9px 0 9px 0px;
+}
+.location-drop .loc-mid a{
+    float: left;
+    width: 120px;
+    height: 25.6px;
+    line-height: 25.6px;
+    padding: 0;
+}
+.loc-bot{
+    margin: 10px 0 8px 10px;
+    width: 290px;
+    height: 110px;
+}
+.location-drop .loc-bot a{
+    float: left;
+    width: 145px;
+    height: 25.6px;
+    line-height: 25.6px;
+    padding: 0;
+}
+.location-drop .loc-bot a:hover span{
+    color: #D6291D;
+}
+.location-drop .loc-bot a img{
+    width: 15px;
+    height: 12px;
+    margin-right: 8px;
+    vertical-align: middle;
 }
 .topbar .topbar-info{
     float: right;
@@ -23,20 +122,17 @@
 }
 .topbar a,
 .topbar span,
+.topbar i{
+    vertical-align: middle;
+    /*垂直方向对齐，必须对父元素设置了line-height的子元素使用*/
+}
+.topbar a,
+.topbar span,
 .topbar .highlight i{
     color: #999;
 }
 .topbar .highlight{
     color: #E51018;
-}
-.go-up{
-    /*不知道为什么，图标字体旁边的汉字会沉下去一些，.go-up用于调整该偏差*/
-    position: relative;
-    top: -2px;
-}
-.go-up i{
-    position: relative;
-    top: 2px;
 }
 .line{
     font-size: 10px;
@@ -46,6 +142,119 @@
 }
 .topbar-info li:first-of-type{
     margin-right: 8px;
+}
+.topbar a:hover{
+    color: #D6291D;
+}
+.topbar-info a:hover i{
+    color: #999;
+}
+.qrcode-wrapper{
+    position: relative;
+}
+.qrcode{
+    width: 76px;
+    height: 76px;
+    position: absolute;
+    z-index: 1;
+    /*如果不设z-index，从左边hover进入，弹出层不出现*/
+    right: 0;
+    top: 35px;
+    right: -10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .1);
+}
+.qrcode img{
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+}
+.qrcode-drop{
+    position: absolute;
+    left: -116px;
+    top: -5px;
+    z-index: 1;
+    width: 190px;
+    height: 404px;
+    border: 1px solid #DDDDDD;
+    border-bottom: 3px solid #000;
+    background-color: #fff;
+    display: none;
+    /*此处不需要overflow:hidden，如果加了还会让小三角看不到*/
+}
+.qrcode-drop::after{
+    position: absolute;
+    top: -4px;
+    right: 29px;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 4px solid #fff;
+    border-top: none;
+    border-color: transparent transparent #fff transparent;
+}
+.qrcode-wrapper:hover .qrcode-drop{
+    display: block;
+}
+.qrcode:hover .qrcode-drop{
+    display: block;
+    /*不需要专为after再写个hover，当本体不可见时after自然也消失不见，本体hover可见时after也一起可见*/
+}
+.qrcode-drop div{
+    width: 190px;
+    height: 70px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.qrcode-drop div img{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    padding: 3px;
+    margin: 0;
+    border: 1px solid #ddd;
+    top: 12px;
+    left: 5.5px;
+}
+.qrcode-drop div p,
+.qrcode-drop div a{
+    position: absolute;
+    font-size: 12px;
+}
+.qrcode-drop div p{
+    width: 94px;
+    height: 16.8px;
+    line-height: 16.8px;
+}
+.qrcode-drop div p:nth-of-type(1){
+    top: 14px;
+    right: 10px;
+    font-weight: bold;
+    color: #666;
+}
+.qrcode-drop div p:nth-of-type(2){
+    top: 33px;
+    right: 10px;
+    color: #D6291D;
+}
+.qrcode-drop div a{
+    width: 94px;
+    height: 25px;
+    line-height: 25px;
+    right: 10px;
+    bottom: 20px;
+}
+.qrcode-drop div a span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/qrcode/sprite.png);
+}
+.qrcode-drop div a span:nth-of-type(2){
+    background-position: center;
+}
+.qrcode-drop div a span:nth-of-type(3){
+    background-position: bottom;
 }
 .header-wrapper{
     width: 100%;
@@ -65,10 +274,12 @@
     position: absolute;
     top: 10px;
 }
-/* .logo a:hover{
+.logo .to-gif{
     background-image: url(../img/gif/1.gif);
-    这里有点问题，之后配合JS修改
-} */
+    background-size: 114px 96px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .search-wrapper{
     width: 100%;
     height: 60px;
@@ -87,7 +298,7 @@
 .search-wrapper button:nth-of-type(1){
     position: absolute;
     left: 751px;
-    bottom: 2px;
+    bottom: 1.5px;
     width: 58px;
     height: 32px;
     outline: none;
@@ -185,20 +396,6 @@
     color: #D6291D;
     font-weight: bold;
 }
-.qrcode{
-    width: 76px;
-    height: 76px;
-    position: absolute;
-    right: 0;
-    top: 4px;
-    right: -2px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, .1);
-}
-.qrcode img{
-    width: 60px;
-    height: 60px;
-    margin: 8px;
-}
 .banner-wrapper{
     width: 100%;
     height: 480px;
@@ -215,24 +412,131 @@
     background-color: #fff;
     top: 10px;
 }
-.menu li{
+.menu>li{
     height: 25px;
     line-height: 25px;
     padding-left: 18px;
     font-size: 14px;
     transition: 0.2s background-color;
 }
-.menu li span{
+.menu>li span{
     display: inline-block;
     font-size: 12px;
     color: #757575;
     padding: 0 2px;
 }
-.menu li:hover{
+.menu>li:hover{
     background-color: #D9D9D9;
 }
-.menu li a:hover{
+.menu>li a:hover{
     color: #D6291D;
+}
+.menu>li:hover ~ .banner-tab-wrapper{
+    display: block;
+}
+.banner-tab-wrapper:hover{
+    display: block;
+}
+.banner-tab-wrapper{
+    position: absolute;
+    z-index: 9999;
+    display: none;
+    background-color: #fff;
+    width: 998px;
+    height: 470px;
+    top: 0;
+    left: 190px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .3);
+    overflow: hidden;
+}
+.banner-tab{
+    width: 998px;
+    height: 420px;
+    padding: 20px 0 0 0;
+    position: absolute;
+}
+.top-area{
+    width: 780px;
+    height: 24px;
+    padding-left: 20px;
+    position: absolute;
+    top: 20px;
+}
+.top-area>a{
+    display: inline-block;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #333;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+.top-area>a:hover{
+    background-color: #D6291D;
+}
+.top-area>a>i,
+.type-list>li>a>i{
+    font-size: 10px;
+}
+.type-list{
+    position: absolute;
+    width: 780px;
+    padding: 10px 0 0 20px;
+    top: 40px;
+}
+.type-list>li{
+    width: 700px;
+    line-height: 32px;
+    padding-left: 80px;
+    font-size: 12px;
+    position: relative;
+}
+.type-list>li>a{
+    font-weight: bold;
+    position: absolute;
+    width: 66px;
+    text-align: end;
+    left: 0px;
+}
+.type-list>li>a:hover{
+    color: #D6291D;
+}
+.type-list>li>span{
+    color: #666;
+    cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 7px;
+}
+.type-list>li>span:hover{
+    color: #D6291D;
+}
+.tab-imgs{
+    position: absolute;
+    width: 198px;
+    height: 424px;
+    right: 0;
+    top: 20px;
+}
+.tab-imgs>div{
+    width: 168px;
+    height: 144px;
+    margin: 0 15px 8px 15px;
+    cursor: pointer;
+}
+.tab-imgs>div img{
+    float: left;
+    width: 83px;
+    height: 35px;
+}
+.tab-imgs>img{
+    width: 168px;
+    height: 134px;
+    margin: 0 15px;
+    cursor: pointer;
 }
 .banner-big-img-list-wrapper{
     position: absolute;
@@ -248,18 +552,22 @@
 }
 .banner-big-img-list li{
     position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.banner-big-img-list li:nth-of-type(1){
+    opacity: 1;
+    /*防止在刷新时，第一张图有过渡效果*/
 }
 .banner-big-img-list img{
     width: 590px;
     height: 470px;
 }
-
 .slider-indicators{
     position: absolute;
     width: 120px;
     height: 15px;
     line-height: 15px;
-    /* background-color: #bfa; */
     left: 30px;
     bottom: 16px;
 }
@@ -293,6 +601,13 @@
     width: 190px;
     height: 150px;
     position: relative;
+}
+.banner-small-img-list ul li{
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+.banner-small-img-list ul li:nth-of-type(1){
+    opacity: 1;
 }
 .banner-small-img-list ul:nth-of-type(2){
     top: 10px;
@@ -585,20 +900,25 @@
     line-height: 30px;
     background-color: #303430;
     vertical-align: middle;
-    margin: 0 4.5px;
+    margin: 0 8px;
     color: #fff;
-    font-size: 22px;
+    font-size: 20px;
     text-align: center;
 }
 .box:first-child{
-    margin-left: 37px;
+    margin-left: 30px;
+}
+.goods-list-wrapper{
+	float: left;
+	position: relative;
+	width: 800px;
+	height: 260px;
+	overflow: hidden;
 }
 .goods-list{
     position: relative;
-    width: 800px;
     height: 260px;
     display: flex;
-    overflow: hidden;
 }
 .goods-list li a{
     display: block;
@@ -692,7 +1012,7 @@
 .goods-list li a:hover>span:nth-of-type(1){
     color: #D6291D;
 }
-.little-slider{
+.little-slider-wrapper{
     float: left;
     display: flex;
     width: 180px;
@@ -703,6 +1023,36 @@
     top: 0;
     right: 0;
     overflow: hidden;
+}
+.little-slider-wrapper ul:nth-of-type(1){
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    margin: 0 auto;
+    z-index: 9999;
+}
+.little-slider-wrapper ul:nth-of-type(1) li{
+    float: left;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #999;
+}
+.little-slider-wrapper ul:nth-of-type(1) li:nth-of-type(1){
+    margin-right: 4px;
+}
+.little-slider-wrapper ul:nth-of-type(1) li:hover{
+    background-color: #D6291D;
+}
+.little-slider{
+    display: flex;
+    width: 540px;
+    height: 240px;
+    position: relative;
+    left: 0;
 }
 .little-slider li a{
     display: block;
@@ -762,29 +1112,6 @@
 .little-slider a div span i{
     font-size: 10px;
 }
-.little-slider ul{
-    position: absolute;
-    width: 12px;
-    height: 4px;
-    /* background-color: #bfa; */
-    left: 0;
-    right: 0;
-    bottom: 5px;
-    margin: 0 auto;
-}
-.little-slider ul li{
-    float: left;
-    width: 4px;
-    height: 4px;
-    border-radius: 50%;
-    background-color: #999;
-}
-.little-slider ul li:nth-of-type(1){
-    margin-right: 4px;
-}
-.little-slider ul li:hover{
-    background-color: #D6291D;
-}
 .moving-wrapper{
     width: 100%;
     height: 260px;
@@ -843,7 +1170,7 @@
 .nice-goods a:hover i{
     color: #D6291D;
 }
-.move-list{
+.move-list-wrapper{
     width: 990px;
     height: 260px;
     position: absolute;
@@ -852,13 +1179,12 @@
     background-color: #fff;
     overflow: hidden;
     /*不知道为什么，直接在这里写overflow-x在两个方向都有滚动条*/
-
 }
-.move-list:hover{
-    /* overflow: overlay; 兼容性不好*/
+/* .move-list-wrapper:hover{
+    overflow: overlay; 兼容性不好
     overflow-x: auto;
 }
-/*
+    ↑放弃用这种方法来写滚动条了
  .move-list::-webkit-scrollbar{
     width: 12px;
 }
@@ -869,51 +1195,51 @@
     这种方式确实能修改滚动条样式，但不兼容FF，尝试原网页那样，用span+JS解决
  */
 
-.move-list ul{
-    width: 950px;
+.move-list{
     height: 260px;
     padding: 0 20px;
     background-color: #fff;
-    position: absolute;
+    display: flex;
+    position: relative;
+    transition: left 30s linear;
+    left: 0;
+    /*transition必须设置初始值，否则无效*/
 }
-.move-list ul:nth-of-type(2){
-    left: 990px;
-}
-.move-list ul li{
+.move-list li{
     float: left;
 }
-.move-list ul li a{
+.move-list li a{
     display: block;
     width: 150px;
     height: 180px;
     margin-right: 50px;
     position: relative;
 }
-.move-list ul li:last-of-type a{
+.move-list li:last-of-type a{
     margin-right: 0;
 }
-.move-list ul li:nth-of-type(2n+1) a{
+.move-list li:nth-of-type(2n+1) a{
     margin-top: 20px;
 }
-.move-list ul li:nth-of-type(2n) a{
+.move-list li:nth-of-type(2n) a{
     margin-top: 55px;
 }
-.move-list ul img{
+.move-list img{
     width: 150px;
     height: 150px;
     position: absolute;
     transition: opacity 0.2s;
 }
-.move-list ul li a:hover img{
+.move-list li a:hover img{
     opacity: 0.8;
 }
-.move-list ul li:nth-of-type(2n+1) img{
+.move-list li:nth-of-type(2n+1) img{
     top: 0px;
 }
-.move-list ul li:nth-of-type(2n) img{
+.move-list li:nth-of-type(2n) img{
     bottom: 0;
 }
-.move-list ul p{
+.move-list p{
     position: absolute;
     width: 150px;
     height: 20px;
@@ -922,11 +1248,40 @@
     text-align: center;
     transition: color 0.2s;
 }
-.move-list ul li a:hover p{
+.move-list li a:hover p{
     color: #D6291D;
 }
-.move-list ul li:nth-of-type(2n+1) p{
+.move-list li:nth-of-type(2n+1) p{
     bottom: 0;
+}
+/*滚动条*/
+.scroll-bar{
+    width: 960px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    margin: 0 auto;
+
+    background-color: #F3F3F3;
+}
+.moving:hover .scroll-bar{
+    /* background-color: #F3F3F3; */
+    /* transition: 0.3s all; */
+}
+.scroll-points{
+    position: absolute;
+    width: 99px;
+    height: 9px;
+    background-color: #D8D8D8;
+    border-top-left-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-right-radius: 18px;
+    transition: left 30s linear;
+    left: 0;
+    top: -3px;
 }
 .tab-wrapper{
     width: 100%;
@@ -948,54 +1303,58 @@
     margin-right: 10px;
 }
 /*此处要用JS去改进，修改当前图片(index)的宽度和高度*/
-.scroll-goods{
+.scroll-goods-wrapper{
     position: absolute;
+    z-index: 1;
     width: 290px;
-    height: 130px;   
+    height: 130px;
     top: 70px;
     overflow: hidden;
     text-align: center;
     cursor: default;
 }
-.scroll-goods div{
-    /* display: none; */
+.scroll-goods{
     position: absolute;
+    display: flex;
+    height: 130px;
+    cursor: default;
+    left: -292px;
+    transition: 0.8s left;
+}
+.scroll-goods div{
+    margin-top: 13px;
     width: 104px;
     height: 104px;
-    /* transition: 0.3s all; */
-    /*暂时没想好哪些需要过渡*/
+    position: relative;
+    margin-left: 15px;
+    cursor: pointer;
+    /* transition: width 1s; */
+    /*也许是用修改类名的缘故，过渡不生效，用move吧*/
 }
 .scroll-goods div img{
+    /* transition: all 0.5s; */
+}
+.scroll-goods .center{
+    /*打算用move修改宽高*/
+    width: 130px;
+    height: 130px;
+    margin-top: 0;
+}
+.scroll-goods .center img{
+    width: 130px;
+    height: 130px;
+}
+.scroll-goods div img{
+    position: relative;
     width: 104px;
     height: 104px;
-    cursor: pointer;
-}
-.scroll-goods div:nth-of-type(1){
-    top: 13px;
-    left: -37px;
-}
-.scroll-goods div.center{
-    width: 130px;
-    height: 130px;
-    left: 80px;
-}
-.scroll-goods div.center img{
-    width: 130px;
-    height: 130px;
-}
-.scroll-goods div:nth-of-type(3){
-    top: 13px;
-    right: -37px;
-}
-.scroll-goods div:nth-of-type(4){
-    top: 13px;
-    right: -154px;
+    z-index: 0;
 }
 .scroll-goods div span{
     position: absolute;
-    z-index: 1;
+    z-index: 9999;
     right: 0;
-    top: 10px;
+    top: 0;
     width: 48px;
     height: 20px;
     line-height: 20px;
@@ -1006,17 +1365,7 @@
     border-bottom-left-radius: 18px;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
-    opacity: 0;
-}
-.scroll-goods .center span{
     opacity: 1;
-    cursor: pointer;
-}
-.scroll-goods .center span:hover + img{
-    opacity: 0.8;
-}
-.scroll-goods object{
-    cursor: pointer;
 }
 .msg{
     position: absolute;
@@ -1564,4 +1913,120 @@
 }
 .footer-help nav:last-of-type a:hover{
     color: #D6291D;
+}
+.back-top{
+    position: absolute;
+    z-index: 3;
+    width: 58px;
+    height: 408px;
+    bottom: -369px;
+    right: 87px;
+}
+.back-top_move{
+    position: fixed;
+    top: 75px;
+    right: 87px;
+    animation: Ani1 500ms;
+}
+.back-top a{
+    display: block;
+    width: 58px;
+    height: 60px;
+    position: relative;
+    font-size: 14px;
+    text-align: center;
+    transition: 0.2s background-color;
+    background-color: #fff;
+    z-index: 2;
+}
+.back-top a .highlight{
+    color: #D6291D;
+}
+.back-top a span{
+    position: absolute;
+    width: 28px;
+    line-height: 18px;
+    left: 0;
+    right: 0;
+    top: 10px;
+    margin: auto;
+    transition: 0.2s color;
+}
+.back-top a:nth-of-type(5) span,
+.back-top a:nth-of-type(6) span,
+.back-top a:nth-of-type(7) span{
+    top: 30px;
+}
+.back-top a i{
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: 0.2s color;
+}
+.back-top a:hover{
+    background-color: #D6291D;
+}
+.back-top a:hover span,
+.back-top a:hover i{
+    color: #fff;
+}
+a.hidden_totop{
+    position: absolute;
+    bottom: 43px;
+    z-index: 1;
+}
+a.show_totop{
+    position: absolute;
+    z-index: 1;
+    animation: Ani2 300ms;
+    bottom: -18px;
+}
+.hori-divider{
+    display: block;
+    height: 1px;
+    width: 30px;
+    /*不知道为什么，我没设置背景颜色，却能看到分割线*/
+}
+.top-pop-wrapper{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    top: -55px;
+    background-color: #fff;
+    z-index: 4;
+    border-bottom: 2px solid #D6291D;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    overflow: hidden;
+    transition: 0.5s top;
+}
+.top-pop{
+    position: relative;
+}
+.top{
+    position: absolute;
+    top: -16px;
+}
+.top-pop>a{
+    position: absolute;
+    width: 125px;
+    height: 40px;
+    left: 0;
+    top: 5px;
+    background-image: url(../img/header/sprite.png);
+    background-position: 0 39px;
+    z-index: 1;
+}
+/*顶部被点击的京东图标*/
+.active_border:active{
+    width: 121px;
+    height: 36px;
+    padding: 2px;
+    border: 2px solid #000;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    background-position: -1.6px 37.5px;
 }
